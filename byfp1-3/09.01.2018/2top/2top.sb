@@ -1,0 +1,18 @@
+GraphicsWindow.PenColor=GraphicsWindow.GetRandomColor()
+GraphicsWindow.BrushColor=GraphicsWindow.GetRandomColor()
+t1=Shapes.AddEllipse(50,50)
+GraphicsWindow.PenColor=GraphicsWindow.GetRandomColor()
+GraphicsWindow.BrushColor=GraphicsWindow.GetRandomColor()
+t2=Shapes.AddEllipse(50,50)
+While 2=2
+  
+  x1=math.GetRandomNumber(GraphicsWindow.Width-50)
+  y1=math.GetRandomNumber(GraphicsWindow.Height-50)
+  x2=math.GetRandomNumber(GraphicsWindow.Width-50)
+  y2=math.GetRandomNumber(GraphicsWindow.Height-50)
+  Shapes.Animate(t1,x1,y1,1000)
+  Shapes.Animate(t2,x2,y2,1000)
+  Program.Delay(1000)
+  
+EndWhile
+  

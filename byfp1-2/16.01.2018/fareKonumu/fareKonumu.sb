@@ -1,0 +1,20 @@
+GraphicsWindow.CanResize="False"
+GraphicsWindow.Width=400
+GraphicsWindow.Height=400
+GraphicsWindow.DrawText(5,5,"Farenin x konumu")
+txtX=Controls.AddTextBox(130,5)
+GraphicsWindow.DrawText(5,40,"Farenin y konumu")
+txtY=Controls.AddTextBox(130,40)
+
+GraphicsWindow.MouseDown=FareTiklandi
+
+Sub FareTiklandi
+  mx=GraphicsWindow.MouseX
+  my=GraphicsWindow.MouseY
+  Controls.SetTextBoxText(txtX,mx)
+  Controls.SetTextBoxText(txtY,my)
+EndSub
+
+
+
+

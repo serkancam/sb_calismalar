@@ -1,0 +1,3 @@
+TextWindow.BackgroundColor="Red"
+TextWindow.ForegroundColor="Yellow"
+TextWindow.WriteLine("Şampiyon Galatasaray")

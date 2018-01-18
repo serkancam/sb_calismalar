@@ -1,0 +1,25 @@
+GraphicsWindow.Title="Ürün fiyat hesapla"
+GraphicsWindow.DrawText(20,20,"ürün fiyatı")
+fiyat=Controls.AddTextBox(100,20)
+GraphicsWindow.DrawText(20,60,"ürün adedi")
+adet=controls.AddTextBox(100,60)
+tikla=Controls.AddButton("Hesapla",20,100)
+GraphicsWindow.DrawText(20,140,"Tutar")
+sonuc=Controls.AddTextBox(100,140)
+
+indirim=controls.AddButton("indirim",120,100)
+' Buraya kadar ekrandaki nesneler oluşturuldu
+
+Controls.ButtonClicked=fiyathesapla
+
+Sub fiyathesapla
+  If Controls.LastClickedButton=tikla Then
+    hesap=Controls.GetTextBoxText(fiyat)*Controls.GetTextBoxText(adet)
+    Controls.SetTextBoxText(sonuc,hesap)
+  EndIf
+  if Controls.LastClickedButton=indirim Then
+    hesap=Controls.GetTextBoxText(sonuc)*0.9
+    Controls.SetTextBoxText(sonuc,hesap)
+  EndIf  
+EndSub
+

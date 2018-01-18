@@ -1,0 +1,18 @@
+TextWindow.WriteLine("Parolayı giriniz:")
+parola=TextWindow.Read()
+TextWindow.Clear()
+If parola="123456" Then
+  TextWindow.WriteLine("Parola doğru")
+  TextWindow.CursorLeft=10
+  TextWindow.CursorTop=3
+  TextWindow.WriteLine("Ege")
+  TextWindow.Title="Necip"
+  TextWindow.WriteLine("Adınızı giriniz:")
+  isim=textwindow.Read()
+  TextWindow.WriteLine("Soyadınızı giriniz:")
+  soyisim=textwindow.Read()
+  TextWindow.WriteLine("merhaba "+isim+" "+soyisim)
+Else
+  TextWindow.Hide()
+EndIf
+  

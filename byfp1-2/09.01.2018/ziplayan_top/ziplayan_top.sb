@@ -1,0 +1,27 @@
+'Pencere hazırla
+GraphicsWindow.Title="Yuvarlanma"
+GraphicsWindow.Height=500
+GraphicsWindow.Width=500
+'çizgiyi çiz ve istenen yere taşı
+GraphicsWindow.PenColor="purple"
+cizgi=shapes.AddLine(0,0,300,0)
+Shapes.Move(cizgi,0,100)
+'Topu çiz istenen yere taşı
+GraphicsWindow.PenColor="Black"
+GraphicsWindow.BrushColor="cyan"
+circle=Shapes.AddEllipse(50,50)
+Shapes.move(circle,0,50)
+Shapes.Animate(circle,300,50,1000)
+Program.Delay(1000)
+Shapes.Animate(circle,300,450,1000)
+Program.Delay(1000)
+For i=0 To 10 Step 1
+    Shapes.Animate(circle,300,450-(450/(i+2)),1000/(i+2))
+    Program.Delay(1000/(i+2))
+    Shapes.Animate(circle,300,450,1000/(i+2))
+    Program.Delay(1000/(i+2))    
+EndFor
+
+
+
+

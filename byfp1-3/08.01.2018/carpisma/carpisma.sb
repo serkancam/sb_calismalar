@@ -1,0 +1,30 @@
+GraphicsWindow.BrushColor="Blue"
+kare=Shapes.AddRectangle(100,300)
+GraphicsWindow.BrushColor="Yellow"
+top=Shapes.AddEllipse(50,50)
+Shapes.Move(top,200,200)
+GraphicsWindow.KeyDown=tus
+Sub tus
+  x=Shapes.GetLeft(top)
+  y=Shapes.GetTop(top)
+  if GraphicsWindow.LastKey="A" then 
+    If x>100 Or y>300 Then 
+      Shapes.Move(top,x-1,y)
+    EndIf 
+  EndIf
+  if GraphicsWindow.LastKey="D" then     
+    Shapes.Move(top,x+1,y)
+  EndIf  
+  if GraphicsWindow.LastKey="S" then 
+         Shapes.Move(top,x,y+1)
+  EndIf 
+  
+  if GraphicsWindow.LastKey="W" then 
+    If x>100 Or y>300 then
+      Shapes.Move(top,x,y-1)
+    EndIf
+    
+    
+    
+  EndIf 
+EndSub

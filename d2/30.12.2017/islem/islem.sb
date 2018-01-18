@@ -1,0 +1,9 @@
+' kullanıcının girdiği iki sayıyı toplayalım
+TextWindow.WriteLine("1. sayıyı giriniz")
+s1=TextWindow.ReadNumber()'1. sayıyı okudum s1 değişkenine aktardım
+TextWindow.WriteLine("2. sayıyı giriniz")
+s2=TextWindow.ReadNumber()'2. sayıyı okudum s2 değişkenine aktardım
+toplam=s1+s2'2 sayıyı topladım
+TextWindow.WriteLine(toplam)'Sonucu ekrana yaz
+
+

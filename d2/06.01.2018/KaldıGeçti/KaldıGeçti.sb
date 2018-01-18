@@ -1,0 +1,14 @@
+TextWindow.WriteLine("1. notunu gir")
+not1=TextWindow.ReadNumber()
+TextWindow.WriteLine("2. notunu gir")
+not2=TextWindow.ReadNumber()
+toplam=not1+not2
+s=toplam/2
+TextWindow.WriteLine("ortalama="+s)
+
+if s>49 Then
+  TextWindow.WriteLine("Dersten geçtin")
+Else
+  TextWindow.WriteLine("Dersten kaldın")
+EndIf
+  

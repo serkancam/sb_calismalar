@@ -1,0 +1,42 @@
+GraphicsWindow.DrawText(20,20,"Fiyat")
+fiyat=Controls.AddTextBox(100,20)
+GraphicsWindow.DrawText(20,60,"Adet")
+adet=Controls.AddTextBox(100,60)
+GraphicsWindow.BrushColor="Red"
+hesapla=Controls.AddButton("Hesapla",20,100)
+indirim=Controls.AddButton("İndirim",100,100)
+GraphicsWindow.DrawText(20,140,"Tutar")
+tutar=Controls.AddTextBox(100,140)
+'Buraya kadar graik ekranını çizdik ama bir eksiğimiz var!
+'Control nesnelerine erişim için bunları değişkene aktaralım
+'Bu saturdan sonra düğme(buton tıklama olayına(event) kod yazacağız)
+kdv=Controls.AddButton("Kdv Ekle",180,100)
+Controls.ButtonClicked=Tikla
+
+Sub Tikla
+  tr=controls.GetTextBoxText(tutar)
+  If Controls.LastClickedButton=hesapla Then
+    f=controls.GetTextBoxText(fiyat)
+    a=controls.GetTextBoxText(adet)
+    Controls.SetTextBoxText(tutar,a*f)
+    'Controls.SetTextBoxText(tutar,controls.GetTextBoxText(fiyat)*controls.GetTextBoxText(adet))
+  EndIf   
+  If Controls.LastClickedButton=indirim Then
+   
+    i=0.9
+    Controls.SetTextBoxText(tutar,tr*i)
+  EndIf 
+   If Controls.LastClickedButton=kdv Then
+     
+     k=1.18
+    Controls.SetTextBoxText(tutar,tr*k)
+  EndIf 
+EndSub
+
+
+
+
+
+
+
+

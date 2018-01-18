@@ -1,0 +1,21 @@
+TextWindow.WriteLine("Ne dinlemek istersin")
+TextWindow.WriteLine("atabarı için 1 ")
+TextWindow.WriteLine("ulaula niyazi için 2")
+TextWindow.WriteLine("habam sınıfı için 3 ")
+TextWindow.WriteLine("hoş gelişler ola için 4'e basınız")
+secim=textwindow.ReadNumber()
+If secim=1 Then
+  Sound.Play("G:\media\müzik\atabari.mp3")
+ElseIf secim=2 then
+  Sound.Play("G:\media\müzik\ulaulaniyazi.mp3")
+ElseIf secim=3 then
+  Sound.Play("G:\media\müzik\hababam sınıfı(enstrümantal)218.mp3")
+ElseIf secim=4 then
+  Sound.Play("G:\media\müzik\HOŞ GELİŞLER OLA.mp3")
+Else
+  TextWindow.WriteLine("yanlış seçim")
+EndIf
+
+  
+  
+

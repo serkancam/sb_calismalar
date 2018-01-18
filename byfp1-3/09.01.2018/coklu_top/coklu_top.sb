@@ -1,0 +1,16 @@
+For counter=1 To 200 Step 1
+  GraphicsWindow.PenColor=GraphicsWindow.GetRandomColor()
+  GraphicsWindow.BrushColor=GraphicsWindow.GetRandomColor()
+  t[counter]=Shapes.AddEllipse(50,50)
+EndFor
+
+While 1=1
+  For i=1 To 200 Step 1
+    x=Math.GetRandomNumber(GraphicsWindow.Width)
+    y=Math.GetRandomNumber(GraphicsWindow.Height)
+    Shapes.Animate(t[i],x,y,1000)
+   
+  EndFor 
+ Program.Delay(1000) 
+EndWhile
+  

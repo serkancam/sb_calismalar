@@ -1,0 +1,10 @@
+TextWindow.WriteLine("Suyun Sıcaklığını giriniz")
+sicaklik=TextWindow.ReadNumber()
+If sicaklik<0 Then
+  TextWindow.WriteLine("Katıdır.")
+ElseIf sicaklik<100 Then
+  TextWindow.WriteLine("Sıvıdır.")
+Else
+  TextWindow.WriteLine("Gazdır.")
+EndIf
+
